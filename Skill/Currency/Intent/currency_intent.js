@@ -1,6 +1,8 @@
-// Currency
-	
-const Intent = require('../../../../src/Intent/intent');
+/**
+ * Currency Intent
+ */
+const Intent = girequire('src/Intent/intent');
+
 const Promise = require('promise');
 const fx = require('money');
 
@@ -15,7 +17,7 @@ module.exports = class CurrencyIntent extends Intent {
 
 		this.parameter('amount',{
 			name: "Amount",
-			entity: "App.Common.Entity.Number",
+			entity: "App.Basics.Entity.Decimal",
 			required: false,
 			default: 1,
 			slotfill: true
